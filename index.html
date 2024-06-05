@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Sidebar Toggle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="navbar">
+            <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+            <div class="navbar-title"><i class="fa-solid fa-gear" style="color: #000000;"></i> ACCOUNT SETTINGS / GENERAL</div>
+            <div class="navbar-icons">
+                <span class="icon"><i class="fa-solid fa-square-plus" style="color: #0092db;"></i></span>
+                <span class="icon"><i class="fa-solid fa-bell"></i></span>
+                <span class="icon"><i class="fa-solid fa-bullhorn"></i></span>
+                <span class="icon"><i class="fa-solid fa-question"></i></span>
+                <div class="profile-container">
+                    <div class="profile-icon">A</div>
+                    <div class="profile-dropdown">
+                        <a href="#profile">View Profile</a>
+                        <a href="#settings">Settings</a>
+                        <a href="#logout">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="container">
+            <div class="sub-container">
+                <div class="sidebar" id="sidebar">
+                    <div class="sidebar-header"><i class="fa-solid fa-gear" style="color: #ffffff;"></i> Settings Dashboard</div>
+                    <ul class="sidebar-menu">
+                        <li><a href="#"><i class="fas fa-user-cog"></i> Account Settings &nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">General</a></li>
+                                <li><a href="#">My Profile</a></li>
+                                <li><a href="#">Currencies</a></li>
+                                <li><a href="#">Security</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><img src="bullseye-arrow.png" alt="" height="20"> &nbsp; Goals</a></li>
+                        <li><a href="#"><i class="fas fa-database"></i> Data Management &nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="#"><i class="fas fa-box-open"></i> Products & Services</a></li>
+                        <li><a href="#"><i class="fas fa-users-cog"></i> User Management &nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="#"><i class="fas fa-chart-line"></i> Field Sales &nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                        <li><a href="#"><i class="fas fa-tools"></i> Customizations</a></li>
+                        <li><a href="#"><i class="fas fa-plug"></i> Integrations</a></li>
+                        <li><a href="#"><i class="fas fa-robot"></i> Automation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sub-container-2">
+                <div class="content" id="content">
+                    <div class="content-header">GENERAL</div>
+                    <div class="form-container">
+                        <h3 class="display-3">General Information</h3>
+                        <form>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="account-name">Account Name *</label>
+                                    <input type="text" id="account-name" name="account-name" value="Ssit Group">
+                                </div>
+                                <div class="form-group">
+                                    <label for="industry">Industry</label>
+                                    <select id="industry" name="industry">
+                                        <option value="Choose">Choose</option>
+                                        <option value="technology">Technology</option>
+                                        <option value="finance">Finance</option>
+                                        <option value="healthcare">Healthcare</option>
+                                        <option value="education">Education</option>
+                                        <option value="retail">Retail</option>
+                                        <option value="manufacturing">Manufacturing</option>
+                                        <option value="transportation">Transportation</option>
+                                        <option value="energy">Energy</option>
+                                        <option value="real-estate">Real Estate</option>
+                                        <option value="hospitality">Hospitality</option>
+                                    </select>
+                                </div>
+                                <h3 class="display-3">Address</h3>
+                                <div class="form-group grid-full-column">
+                                    <label for="address">Address</label>
+                                    <input type="text" id="address" name="address" placeholder=" Enter values">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" placeholder=" Enter values">
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State</label>
+                                    <input type="text" id="state" name="state" placeholder=" Enter values">
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <select id="country" name="country">
+                                        <option value="India">India</option>
+                                        <option value="America">America</option>
+                                        <option value="England">England</option>
+                                        <option value="China">China</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipcode">Zipcode</label>
+                                    <input type="text" id="zipcode" name="zipcode" placeholder=" Enter values">
+                                </div>
+                                <div class="form-group grid-full-column">
+                                    <label for="tin">TIN (Tax Identification Number)</label>
+                                    <input type="text" id="tin" name="tin" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn-cancel" type="reset">Cancel</button>
+                                <button class="btn-save" type="submit">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
